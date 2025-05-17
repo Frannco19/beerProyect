@@ -5,7 +5,8 @@ const BeerItem = ({
     beerName,
     beerStyle,
     price,
-    available
+    available,
+    dollarValue 
 }) => {
   return (
     <Card className="beer-container mx-3 mb-2">
@@ -24,6 +25,7 @@ const BeerItem = ({
                 <p>{price} precio</p>
                 <p>{available ? "Disponible" : "No disponible"}</p>
                 <Button>Actualizar título</Button>
+                <p>Precio en pesos: ${(price * dollarValue).toFixed(2)} ARS</p>
             </Card.Body>
         </Card>
   )

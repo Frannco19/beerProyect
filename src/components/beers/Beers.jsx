@@ -1,17 +1,17 @@
 
 import BeerItem from '../beerItem/BeerItem'
 
-const Beers = ({ beers }) => {
+const Beers = ({ beers, dollarValue }) => {
 
-    const usdToArs = 900;
 
     const beersMapped = beers.map(beer => (
         <BeerItem
             key={beer.id}
             beerName={beer.beerName}
             beerStyle={beer.beerStyle}
-            price={beer.price * usdToArs}
+            price={beer.price}
             available={beer.available}
+            dollarValue={dollarValue}
         />
     ))
 
